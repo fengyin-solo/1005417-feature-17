@@ -199,6 +199,8 @@ export const MODULES: ModuleMeta[] = [
     actions: ["提交登记", "确认转移", "登记解除"],
     actionTargets: {"提交登记": "已登记", "确认转移": "已转移", "登记解除": "已解除"},
     metrics: ["已登记对象", "已转移对象", "涉及人数合计"],
+    // 环节只能按 待登记→已登记→已转移→已解除 逐格流转，跳格、回退都挡回。
+    strictFlow: true,
   },
 ]
 

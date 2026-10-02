@@ -82,7 +82,8 @@ import {
 import type { EntryRow } from '@/data/types'
 
 const meta = moduleMeta('crack')
-const columns = ["裂缝编号", "所属隐患点", "裂缝走向", "本期宽度", "累计变宽", "观测日期", "观测人", "裂缝状态"]
+// 末尾的「对象类型」列给受威胁对象同步过来的转移核对项用，普通观测记录没有这项，显示为 —。
+const columns = ["裂缝编号", "所属隐患点", "裂缝走向", "本期宽度", "累计变宽", "观测日期", "观测人", "裂缝状态", "对象类型"]
 const actions = ["提交观测", "标记变宽", "登记封填"]
 const statuses = ["待观测", "稳定", "持续变宽", "已封填"]
 const stats = [{"label": "待观测裂缝", "value": 0}, {"label": "持续变宽裂缝", "value": 0}, {"label": "累计变宽最大值", "value": 0}]
